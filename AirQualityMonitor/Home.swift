@@ -57,7 +57,7 @@ class Home : NSObject, HMHomeManagerDelegate, HMAccessoryDelegate, ObservableObj
         let size = CGSize(width: (6 * 21) + 8, height: 21)
         
         let renderer = UIGraphicsImageRenderer(size: size)
-        let symcfg = UIImage.SymbolConfiguration(pointSize: 13, weight: .bold)
+        let symcfg = UIImage.SymbolConfiguration(pointSize: 13, weight: .regular)
         
         let image = renderer.image { (UIGraphicsImageRendererContext) in
             for i in 0..<6 {
@@ -72,7 +72,7 @@ class Home : NSObject, HMHomeManagerDelegate, HMAccessoryDelegate, ObservableObj
                     glyph = UIImage(systemName: "star", withConfiguration: symcfg)?.withRenderingMode(.alwaysTemplate)
                 }
                 
-                glyph?.draw(at: CGPoint(x: (i > 0 ? 8 : 0) + i * 21, y: 2))
+                glyph?.draw(at: CGPoint(x: (i > 0 ? 8 : 0) + i * 21, y: (i == 0) ? 4 : 2))
             }
         }
         
