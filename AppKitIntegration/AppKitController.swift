@@ -44,10 +44,6 @@ extension NSWindow {
             image?.isTemplate = true
             statusItem.image = image
             statusItem.menu = createMenu()
-            
-//            for window in NSApplication.shared.orderedWindows {
-//                window.close()
-//            }
         }
         
     }
